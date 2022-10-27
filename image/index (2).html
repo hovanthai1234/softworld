@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <style>
+    .wrapper{
+      width: 80%;
+      margin: auto;
+    }
+    .header{
+      display: flex;
+    }
+    .menu li{
+      list-style: none;
+
+     
+    }
+    .left{
+      width: 15%;
+    }
+    .menu{
+      width: 70%;
+    }
+    .right{
+     width: 15%;
+     align-items: center;
+     display: flex;
+     justify-content: center;
+    }
+
+    ul{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 0;
+      align-items: center;/*lam chu thang hang*/
+    }
+
+    .menu-scroll {
+      /* display: none; */
+    }
+
+ 
+    @media screen and (max-width: 876px) and (min-width: 280px)  {
+    .header {
+        flex-direction: column;
+      }
+
+      .menu-scroll {
+        /* display: block; */
+      }
+
+      .left, .menu, .right {
+        width: 100%;
+        margin: 0;
+      }
+
+      ul {
+        width: 100%;
+        margin: 0;
+        display: block;
+        
+      }
+
+      ul li {
+        text-align:center;
+      }
+
+      .right {
+        width: 100%;
+      }
+
+      .right a {
+        text-align: center;
+       
+      }
+      /*  */
+      .menu li:not(:first-child) {display: none;}
+  .menu li.icon {
+    /* float: right; */
+    display: block;
+  }
+  .menu.responsive {position: relative;}
+  .menu.responsive .icon {
+
+  }
+  .menu.responsive a {
+
+  }
+
+}
+
+
+  </style>
+</head>
+<body>
+  <div class="wrapper" id="myTopnav">
+     <div class="header">
+         <div class="left"></div>
+           <div class="menu">
+            
+                <ul>
+                  <li>Trang chủ</li>
+                  <li>Chúng tôi</li>
+                  <li>Dịch vụ</li>
+                  <li><img src="./image/sw_logo.svg" alt=""></li>
+                  <li>Đối tác</li>
+                  <li>Tin tức</li>
+                  <li>Liên hệ</li>
+                  <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                  </a></li>
+                </ul>
+           </div>
+              <div class="right">
+                   <a href="">Nhận tư vấn ngay</a>
+              </div>
+     </div>
+  </div>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "menu") {
+        x.className += " responsive";
+      } else {
+        x.className = "menu";
+      }
+    }
+    </script>
+</body>
+</html>
